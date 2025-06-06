@@ -827,8 +827,8 @@ body .navbar .dark-mode, body:not(.dark) .navbar .dark-mode {
   align-self: center;
 }
 #sidebar .theme-brand div.theme-logo img {
-  width: 40px;
-  height: 40px;
+  width: 180px;
+  /* height: 40px; */
 }
 
 .sidebar-closed .sidebar-wrapper.sidebar-theme .theme-brand .sidebar-toggle {

@@ -43,7 +43,7 @@
     
                         <div class="position-relative">
     
-                            <img src="{{ asset('src/assets/img/flag-inr.svg') }}" alt="auth-img">
+                            <img src="{{ asset('src/assets/img/logo-alaric.png') }}" alt="auth-img">
     
                             <h2 class="mt-5 text-white font-weight-bolder px-2">ALARIC ASSET MANAGEMENT </h2>
                             <p class="text-white px-2">Welcome to Admin Section</p>
@@ -56,7 +56,10 @@
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center ms-lg-auto me-lg-0 mx-auto">
                     <div class="card">
                         <div class="card-body">
+                            <div class="position-relative">
     
+                            <img src="{{ asset('src/assets/img/logo-alaric-blue.png') }}" alt="auth-img" style="width:50%">
+                            </div>
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     @if (Session::has('error'))

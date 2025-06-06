@@ -258,13 +258,13 @@
                 <div class="navbar-nav theme-brand flex-row  text-center">
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
-                            <a href="#">
-                                <img src="{{ asset('src/assets/img/logo.svg') }}" class="navbar-logo" alt="logo">
+                            <a href="{{ route('admin.dashboard') }}">
+                                <img src="{{ asset('src/assets/img/logo-alaric-cropped.png') }}" class="navbar-logo" alt="logo">
                             </a>
                         </div>
-                        <div class="nav-item theme-text">
+                        {{-- <div class="nav-item theme-text">
                             <a href="{{ route('admin.dashboard') }}" class="nav-link"> ALARIC IT </a>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="nav-item sidebar-toggle">
                         <div class="btn-toggle sidebarCollapse">
