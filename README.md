@@ -178,17 +178,6 @@ Ensure you have the following installed on your development machine:
 
 ## Configuration
 
-The primary configuration for the application is managed through the `.env` file. Key variables to note from `c:\wamp64\www\ai\.env.example` include:
-
-*   `APP_NAME`: The name of your application ("Alaric-IT-Management").
-*   `APP_ENV`: The environment (e.g., `local`, `staging`, `production`).
-*   `APP_DEBUG`: Enables/disables debug mode. **Should be `false` in production.**
-*   `APP_URL`: The base URL of your application.
-*   `DB_*`: Database connection details (defaults to MySQL).
-*   `SESSION_DRIVER`: How sessions are stored (defaults to `database`).
-*   `QUEUE_CONNECTION`: How queued jobs are handled (defaults to `database`).
-*   `CACHE_STORE`: How caching is handled (defaults to `database`).
-*   `MAIL_MAILER`: Mail driver configuration (defaults to `log` for local development, which writes emails to log files instead of sending them).
 
 Refer to the `c:\wamp64\www\ai\.env.example` file for a full list of environment variables and their default values.
 
