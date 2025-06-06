@@ -135,12 +135,7 @@ Ensure you have the following installed on your development machine:
     APP_DEBUG=true
     APP_URL=http://localhost # Or your preferred local development URL (e.g., http://alaric-it.test)
 
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=alaric_it  # Ensure this database exists or create it
-    DB_USERNAME=root       # Change to your DB username
-    DB_PASSWORD=           # Change to your DB password
+  
 
     # Review other settings like MAIL_MAILER, QUEUE_CONNECTION, SESSION_DRIVER, CACHE_STORE.
     # The defaults from .env.example (log, database, database, database respectively) are often fine for initial local development.
