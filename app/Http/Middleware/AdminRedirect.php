@@ -9,16 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AdminRedirect
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
-        if (Auth::guard('admin')->check()) {
+        // If already authenticated on the admin guard and role matches, send to dashboard
+        if (Auth::guard('admin')->check() && Auth::guard('admin')->user()->role === 'admin') {
             return redirect()->route('admin.dashboard');
-        }  
+        }
         return $next($request);
     }
 }

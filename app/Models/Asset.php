@@ -21,11 +21,14 @@ class Asset extends Model
         'purchase_cost',
         'image_path',
     ];
+    public function type()
+    {
+        return $this->belongsTo(AssetType::class, 'asset_type');
+    }
     public function assetType()
     {
         return $this->belongsTo(AssetType::class, 'asset_type');
     }
-
     public function assignments()
     {
         return $this->hasMany(AssetAssignment::class, 'asset_id');

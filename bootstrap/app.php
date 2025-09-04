@@ -25,21 +25,17 @@ return Application::configure(basePath: dirname(__DIR__))
         //     guests: '/user/login',
         //     users: '/user/dashboard',
         // );
-        $middleware->redirectTo(
-            guests: 'user/login',
-            users: function ($user) {
-                switch ($user->role) {
-                    case 'admin':
-                        return '/admin/dashboard';
-                    case 'hr':
-                        return '/hr/dashboard';
-                    case 'auditor':
-                        return '/auditor/dashboard';
-                    default:
-                        return '/user/dashboard';
-                }
-            },
-        );
+$middleware->redirectTo(
+    guests: '/user/login',
+    users: function ($user) {
+        return match ($user->role) {
+            'admin'   => '/admin/dashboard',
+            'hr'      => '/hr/dashboard',
+            'auditor' => '/auditor/dashboard',
+            default   => '/user/dashboard',
+        };
+    },
+);
 
     })
     ->withExceptions(function (Exceptions $exceptions) {

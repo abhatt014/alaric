@@ -56,7 +56,7 @@
                                     <label for="type">Type</label>
                                     @foreach ($assets as $asset)
                                         <input id="type" type="text" name="asset_type" class="form-control"
-                                            value="{{ $asset->assetType->type_name }}" readonly>
+                                            value="{{ $asset->Type->type_name }}" readonly>
                                     @endforeach
 
 
@@ -153,7 +153,18 @@
                                     <a href="{{ route('admin.dashboard') }}" class="btn btn-warning w-100">Back</a>
                                     
                                     <div class="separator"><br></div>
-                                    <button class="btn btn-secondary w-100">Accept Return</button>
+                                    
+                                    {{-- Conditional rendering based on status --}}
+
+                                    @if($assetReturnRequest->status === 'approved')
+                                    <button class="btn btn-secondary w-100" disabled>Admin Approved</button>
+                                    @elseif($assetReturnRequest->status === 'admin-pending')
+                                     <button class="btn btn-secondary w-100">Accept Return</button>
+                                  
+                                     @elseif($assetReturnRequest->status === 'hr-pending')
+                                     <button class="btn btn-secondary w-100" disabled>Accepted By Admin</button>
+                                    @endif
+                                   
                                      </form>
                                     
                                        

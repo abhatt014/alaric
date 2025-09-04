@@ -41,12 +41,12 @@
                         
                     <div class="auth-cover">
     
-                        <div class="position-relative">
+                       <div class="position-relative">
     
-                            <img src="{{ asset('src/assets/img/flag-inr.svg') }}" alt="auth-img">
+                            <img src="{{ asset('src/assets/img/logo-alaric.png') }}" alt="auth-img">
     
                             <h2 class="mt-5 text-white font-weight-bolder px-2">ALARIC ASSET MANAGEMENT </h2>
-                            <p class="text-white px-2">Welcome to Employee Portal</p>
+                            <p class="text-white px-2">Welcome to HR Section</p>
                         </div>
                         
                     </div>

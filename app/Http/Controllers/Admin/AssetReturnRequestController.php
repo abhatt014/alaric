@@ -51,7 +51,7 @@ class AssetReturnRequestController extends Controller
 
     public function index(AssetReturnRequest $assetReturnRequest)
     {
-
+        //dd($assetReturnRequest);
         //fetch userid
         $userId = $assetReturnRequest->user_id;
 

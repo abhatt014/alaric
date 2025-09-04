@@ -46,7 +46,7 @@ active
            
 
             <div class="col-xl-3 col-lg-6 col-md-6  mb-4">
-                <div class="card bg-primary">
+                <div class="card bg-dark">
                     <div class="card-body pt-3">
                         <h3 class="card-title mb-3">{{ $totalLaptops }}</h3>
                         <h4 class="card-text">Total Laptops</h4>
@@ -58,7 +58,7 @@ active
             </div>
 
             <div class="col-xl-3 col-lg-6 col-md-6  mb-4">
-                <div class="card bg-secondary">
+                <div class="card bg-dark">
                     <div class="card-body pt-3">
                         <h3 class="card-title mb-3">{{ $totalDesktops }}</h3>
                         <h4 class="card-text">Total Desktops</h4>
@@ -82,7 +82,7 @@ active
 
 
             <div class="col-xl-3 col-lg-6 col-md-6  mb-4">
-                <div class="card bg-danger">
+                <div class="card bg-dark">
                     <div class="card-body pt-3">
                         <h3 class="card-title mb-3">{{ $totalConsumables }}</h3>
                         <h4 class="card-text">Total Consumables</h4>

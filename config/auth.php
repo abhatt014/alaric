@@ -35,24 +35,12 @@ return [
     |
     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
-        'auditor' => [
-            'driver' => 'session',
-            'provider' => 'auditors',
-        ],
-        'hr' => [
-            'driver' => 'session',
-            'provider' => 'hrs',
-        ],
-    ],
+'guards' => [
+    'web' => ['driver' => 'session', 'provider' => 'users'],
+    'admin' => ['driver' => 'session', 'provider' => 'users'],
+    'auditor' => ['driver' => 'session', 'provider' => 'users'],
+    'hr' => ['driver' => 'session', 'provider' => 'users'],
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -71,29 +59,12 @@ return [
     |
     */
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-        'auditors' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-        'hrs' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\User::class, // hardcode to avoid ENV drift
     ],
+],
 
     /*
     |--------------------------------------------------------------------------
